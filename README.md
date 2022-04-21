@@ -1,9 +1,9 @@
-# Task:
+# Challenge:
 
 Implement single page application, displaying in its landing page (home page), a table with the following columns:
 Teacher                School                   School Year
 
-Requirements:
+## Requirements:
 - Table is centered horizontally in the home page
 - Column heads row is blue background with white font
 - Cells have blue borders and light gray background
@@ -13,29 +13,23 @@ Requirements:
 - The table must be done using Hotwire/Stimulus/TurboFrame, on the front end, without having to go back to the server to refresh the screen, or using any JS libraries (such as datatables).
 
 
-Things covered:
+# Things covered:
 
-* Ruby version
-- 3.1.0
-
-* Rails version
-- ~> 7.0.2
-
+* Ruby version: 3.1.0
+* Rails version: ~> 7.0.2
 * MySql
 * Tailwind
 * TurboFrame
 
-* Deployment instructions
-- clone the project
-- go to the directory
-- run bundle install
-- create .env file at root directory of the project
-- go to the database.yml file and add environment variables in .env according to database.yml
-- run rails db:create db:migrate db:seed
-- run rails s to start rails server
+# Deployment instructions
+- Clone the project
+- Go to the directory
+- Run bundle install
+- Create .env file at root directory of the project
+- Go to the database.yml file and add environment variables in .env according to database.yml
+- Run rails db:create db:migrate db:seed
+- Run rails s to start rails server
 
-* How to run rspec/test cases:
+# How to run rspec/test cases:
 - run this on console *rspec spec/models/teacher_spec.rb*
 - run this on console *rspec spec/controllers/teachers_spec.rb*
-
-* ...
