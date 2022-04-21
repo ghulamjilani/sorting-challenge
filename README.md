@@ -13,7 +13,7 @@ Teacher                School                   School Year
 - The table must be done using Hotwire/Stimulus/TurboFrame, on the front end, without having to go back to the server to refresh the screen, or using any JS libraries (such as datatables).
 
 
-# Things covered:
+# Tech Stack:
 
 * Ruby version: 3.1.0
 * Rails version: ~> 7.0.2
