@@ -1,0 +1,46 @@
+<h1 class="order-1 text-gray-900 text-3xl font-extrabold tracking-tight mb-4">Teachers Data</h1>
+<%= turbo_frame_tag "teachers", class: "shadow overflow-hidden rounded border-b border-gray-200" do %>
+  <div class="shadow overflow-hidden rounded border-b border-gray-200">
+    <table class="min-w-full bg-white">
+      <thead class="bg-blue-600 text-white">
+        <tr>
+          <th class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
+            #
+          </th>
+          <th class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
+            <div class="flex">
+              <%= sort_link(column: "name", label: "Teacher") %>
+              <%= sort_indicator if params[:column] == "name" %>
+            </div>
+          </th>
+          <th class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
+            <div class="flex">
+              <%= sort_link(column: "school", label: "School") %>
+              <%= sort_indicator if params[:column] == "school" %>
+            </div>
+          </th>
+          <th class="text-left py-3 px-6 uppercase font-semibold text-sm hover:cursor-pointer">
+            <div class="flex">
+              <%= sort_link(column: "school_year", label: "School Year") %>
+              <%= sort_indicator if params[:column] == "school_year" %>
+            </div>
+          </th>
+        </tr>
+      </thead>
+  
+      <tbody class="text-gray-700">
+        <% teachers.each_with_index do |teacher, index| %>
+          <tr>
+            <td class="text-left py-3 px-6 border border-l-2 border-blue-500 bg-gray-100"><%= index+1 %></td>
+            <td class="text-left py-3 px-6 border border-blue-500 bg-gray-100"><%= teacher.name %></td>
+            <td class="text-left py-3 px-6 border border-blue-500 bg-gray-100"><%= teacher.school %></td>
+            <td class="text-center py-3 px-6 border border-blue-500 bg-gray-100"><%= teacher.school_year %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="text-center mt-5 mb-10">
+    <%= paginate teachers if teachers.respond_to?(:total_pages) %>
+  </div>
+<% end %>
